@@ -54,8 +54,8 @@ Contributions are welcome! Feel free to fork the repository and submit a pull re
 ## 📄 License
 This project is licensed under the MIT License. You are free to use, modify, and distribute it.
 
--- 💌 Contact
+## 💌 Contact
 For questions or feedback, feel free to reach out:
 
--GitHub: Kabilesh1234
--Email: kabilesh455@gmail.com
+- GitHub: Kabilesh1234
+- Email: kabilesh455@gmail.com

@@ -1,115 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List</title>
+    <title>TODO List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .todo-container {
+            width: 400px;
+            background-color: beige;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .input-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .input-container input {
+            flex: 1;
+            padding: 8px;
+            font-size: 16px;
+            border: none;
+            background-color: pink;
+            border-radius: 4px;
+        }
+
+        .input-container input::placeholder{
+            color: black;
+        }
+
+        .input-container input:focus{
+            border: brown;
+            background-color: palevioletred;
+            color: black;
+        }
+
+        .input-container button {
+            margin-left: 10px;
+            padding: 8px 12px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: brown;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .input-container button:hover {
+            background-color: rgb(134, 36, 36);
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: lightsalmon;
+            border-radius: 4px;
+        }
+
+        li span {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        li button {
+            background-color: #fd1100;
+            color: black;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        li button:hover {
+            background-color: #9c0202;
+            color: #f9f9f9;
+        }
+    </style>
 </head>
-<style>
-    body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #EE9480;
-}
 
-.container {
-    text-align: center;
-    background: #CCD7C5;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    color: #3333cc;
-}
-
-input {
-    padding: 10px;
-    width: 60%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    padding: 10px 15px;
-    background-color: #3333cc;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #5555ff;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #C7A27C;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-li button {
-    background-color: #3333cc;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    color: white;
-}
-
-li button:hover {
-    background-color: #5555ff;
-}
-
-</style>
-<link rel="icon" type="image/x-icon" href="todo.png">
 <body>
-    <div class="container">
-        <h1>BUILD TO-DO LIST</h1>
-        <input type="text" id="taskInput" placeholder="Add some task">
-        <button onclick="addTask()">ADD</button>
-        <ul id="taskList"></ul>
+
+    <div class="todo-container">
+        <h1>Todo List</h1>
+        <div class="input-container">
+            <input type="text" id="todoInput" placeholder="Enter todo...">
+            <button id="addButton">Add</button>
+        </div>
+        <ul id="todoList"></ul>
     </div>
+
     <script>
-        function addTask() {
-    const taskInput = document.getElementById('taskInput');
-    const taskList = document.getElementById('taskList');
+        const todoInput = document.getElementById('todoInput');
+        const addButton = document.getElementById('addButton');
+        const todoList = document.getElementById('todoList');
 
-    if (taskInput.value === '') {
-        alert('Please enter a task.');
-        return;
-    }
+        function addTodo() {
+            const todoText = todoInput.value.trim();
 
-    const li = document.createElement('li');
-    li.textContent = taskInput.value;
+            if (todoText !== '') {
+                const todoItem = document.createElement('li');
+                todoItem.innerHTML = `<span>${todoText}</span>`;
 
-    const deleteButton = document.createElement('button');
-    deleteButton.textContent = 'DELETE';
-    deleteButton.onclick = function() {
-        taskList.removeChild(li);
-    };
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Delete';
+                deleteButton.classList.add('delete-btn'); 
+                deleteButton.addEventListener('click', () => {
+                    todoItem.remove();
+                });
 
-    li.appendChild(deleteButton);
-    taskList.appendChild(li);
+                todoItem.appendChild(deleteButton);
 
-    taskInput.value = '';
-}
+                todoList.appendChild(todoItem);
+
+                todoInput.value = '';
+            }
+        }
+
+        addButton.addEventListener('click', addTodo);
+
+        todoInput.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                addTodo();
+            }
+        });
+
 
     </script>
 </body>
+
 </html>

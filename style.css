@@ -1,0 +1,92 @@
+  body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .todo-container {
+            width: 400px;
+            background-color: beige;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .input-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .input-container input {
+            flex: 1;
+            padding: 8px;
+            font-size: 16px;
+            border: none;
+            background-color: pink;
+            border-radius: 4px;
+        }
+
+        .input-container input::placeholder{
+            color: black;
+        }
+
+        .input-container input:focus{
+            border: brown;
+            background-color: palevioletred;
+            color: black;
+        }
+
+        .input-container button {
+            margin-left: 10px;
+            padding: 8px 12px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: brown;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .input-container button:hover {
+            background-color: rgb(134, 36, 36);
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: lightsalmon;
+            border-radius: 4px;
+        }
+
+        li span {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        li button {
+            background-color: #fd1100;
+            color: black;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        li button:hover {
+            background-color: #9c0202;
+            color: #f9f9f9;
+        }

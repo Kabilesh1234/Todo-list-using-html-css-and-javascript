@@ -27,7 +27,7 @@ A simple, interactive, and responsive To-Do List web application built using **H
 ## 💡 How to Use  
 1. Clone the repository:  
    ```bash  
-   git clone https://github.com/kabilesh1234/Todo-list-using-html-css-and-javascript.git
+   git clone https://github.com/Kabilesh1234/Todo-list-using-html-css-and-javascript.git
 2. Navigate to the project directory:
 cd  Todo-list-using-html-css-and-javascript
 3. Open the index.html file in your browser to view the app.

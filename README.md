@@ -57,5 +57,5 @@ This project is licensed under the MIT License. You are free to use, modify, and
 -- 💌 Contact
 For questions or feedback, feel free to reach out:
 
-GitHub: Kabilesh1234
-Email: kabilesh455@gmail.com
+-GitHub: Kabilesh1234
+-Email: kabilesh455@gmail.com

@@ -13,8 +13,7 @@ A simple, interactive, and responsive To-Do List web application built using **H
 ---
 
 ## 📸 Preview  
-![To-Do List Preview](https://via.placeholder.com/800x400?text=Project+Screenshot)  
-*(Replace this placeholder with an actual screenshot of your app)*  
+![To-Do List Preview](preview.png)  
 
 ---
 

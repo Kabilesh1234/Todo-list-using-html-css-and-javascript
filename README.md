@@ -33,6 +33,8 @@ cd  Todo-list-using-html-css-and-javascript
 3. Open the index.html file in your browser to view the app.
 
 ---
+
+
 ## 📂 Project Structure
 📁 todo-list  
 ├── 📄 index.html  # Main HTML file  
@@ -41,18 +43,27 @@ cd  Todo-list-using-html-css-and-javascript
 └── 📁 assets      # Folder for images 
 
 ---
+
+
 ## 🌟 Future Enhancements
 - Add task categories for better organization.
 - Implement local storage to save tasks between sessions.
 - Add a dark mode toggle for better user experience.
 
 ---
+
+
 ## 🙌 Contributing
 Contributions are welcome! Feel free to fork the repository and submit a pull request.
 
 ---
+
+
 ## 📄 License
 This project is licensed under the MIT License. You are free to use, modify, and distribute it.
+
+---
+
 
 ## 💌 Contact
 For questions or feedback, feel free to reach out:
